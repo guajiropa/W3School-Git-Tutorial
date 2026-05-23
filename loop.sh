@@ -2,6 +2,6 @@
 
 
 for thing in "$@"; do
-       echo "This thing is nuw:  $thing"
+       echo "This thing is now:  $thing"
 done
 
