@@ -1,0 +1,80 @@
+    1  ls -lhA
+    2  rm bitch_*
+    3  type rm
+    4  which rm
+    5  echo $HOSTNAME
+    6  echo $MACHTYPE
+    7  name='bitch-boy Bobby'
+    8  echo $name
+    9  name='Bitch-Boy Bobby'
+   10  echo $name
+   11  touch $name
+   12  ls -lhA
+   13  ls -lh
+   14  cat Bobby
+   15  unset name
+   16  echo $name
+   17  uname
+   18  uname -a
+   19  thing=`uname -a`
+   20  echo thing
+   21  echo $thing
+   22  thing=$(uname -a)
+   23  echo $thing
+   24  rm bitch-boy
+   25  grep alias mycmds.txt
+   26  alias rm='rm -i'
+   27  rm bitch*
+   28  rm bitch-boy
+   29  ls -lh
+   30  which rm
+   31  type rm
+   32  man rm
+   33  which vim
+   34  vim shell_file.txt
+   35  vim file.txt
+   36  cat file.txt
+   37  vim file.txt
+   38  vim script.sh
+   39  cat script.sh
+   40  bash script.sh
+   41  vim script.sh
+   42  bash script.sh
+   43  vim script.sh
+   44  bash script.sh
+   45  vim script.sh
+   46  bash script.sh
+   47  vim script.sh
+   48  bash script.sh
+   49  history
+   50  ./script.sh
+   51  sudo ./script.sh
+   52  ls -lh
+   53  chmod +x script.sh
+   54  ls -lh
+   55  ./script.sh
+   56  vim script.sh
+   57  ./script.sh
+   58  vim script.sh
+   59  file script.sh
+   60  vim hello.sh
+   61  chmod +x hello.sh
+   62  ./hello.sh
+   63  cp hello.sh greet.sh
+   64  ls -lh
+   65  ./greet.sh
+   66  vim greet.sh
+   67  ./greet.sh
+   68  cp greet.sh loop.sh
+   69  vim loop.sh
+   70  ./loop.sh
+   71  bash -n loop.sh
+   72  history > mycmds.txt
+   73  ls -l -h
+   74  ech $?
+   75  echo $?
+   76  ./loop.sh
+   77  ech $?
+   78  ./loop.sh
+   79  echo $?
+   80  history > mycmds.txt

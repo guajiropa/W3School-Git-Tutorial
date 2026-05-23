@@ -1,0 +1,38 @@
+
+Hello, how are you?
+This is a normal text editor.
+
+Write something fresh,
+write something new.
+Wtie something bold,
+write till you blue.
+
+write till you blue.
+write till you blue.
+write till you blue.
+write something new.
+write something new.
+write something new.
+write something new.
+
+*VIM*
+Y to Yank and P to paste
+(when in NAV mode)
+
+Y to Yank and P to paste
+(when in NAV mode)
+(when in NAV mode)
+
+(when in NAV mode)
+
+.. to repeat the last thing you did
+ o to enter a blank line
+(when in NAV mode)
+(when in NAV mode)
+
+
+
+
+
+
+
