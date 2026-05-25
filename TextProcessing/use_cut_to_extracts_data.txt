@@ -1,0 +1,67 @@
+Using the cut Command
+The cut command is used to remove sections from each line of files.
+
+It's a useful tool for extracting specific fields of data from a file or output stream.
+
+All examples below use the example_data.txt file:
+
+Kai 	Refsnes	30,Norway
+Robin	Smith	25,Denmark
+Sienna	Davis	40,Germany
+Basic Usage
+To extract the first field of a file, use cut -f1 filename:
+
+Example: Extract First Field
+cut -f1 example_data.txt
+Kai
+Robin
+Sienna
+By default, cut uses a tab as the delimiter.
+
+Options
+The cut command has options to change how it works:
+
+-d - Choose what separates the fields
+-f - Select specific fields to display
+--complement - Show all fields except the selected ones
+Specify a Delimiter
+The -d option allows you to choose what separates the fields.
+
+Example: Specify a Delimiter
+cut -d',' -f1 example_data.txt
+Kai     Refsnes 30
+Robin   Smith   25
+Sienna  Davis   40
+Select Specific Fields
+The -f option allows you to select specific fields to display.
+
+Example: Select Specific Fields
+cut -f1-2 example_data.txt
+Kai     Refsnes
+Robin   Smith
+Sienna  Davis
+Show Complement
+The --complement option allows you to show all fields except the selected ones.
+
+Example: Show Complement
+cut --complement -f1 example_data.txt
+Refsnes 30,Norway
+Smith   25,Denmark
+Davis   40,Germany
+
+Advanced Field Extraction
+Cut can perform advanced field extraction tasks.
+
+For example, cut -d' ' -f2-3 example_data.txt extracts fields 2 through 3 from the file.
+
+Example: Advanced Field Extraction
+cut -f2-3 example_data.txt
+Refsnes 30,Norway
+Smith   25,Denmark
+Davis   40,Germany
+Common Errors and Troubleshooting
+When using cut, you might encounter errors such as:
+
+"cut: delimiter must be a single character" - Ensure the delimiter is correctly specified.
+"cut: fields and positions are numbered from 1" - Remember that field and position numbering starts at 1.
+Debugging tips include checking the delimiter and field specifications to ensure they match the file's format

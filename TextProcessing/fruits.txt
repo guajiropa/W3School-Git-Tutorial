@@ -1,0 +1,6 @@
+kiwis,3
+bananas,4
+oranges,20
+bananas,2
+kiwis,3
+apples,1

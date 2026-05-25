@@ -1,0 +1,46 @@
+Using the cp Command
+The cp command is used to copy files and directories from one location to another
+
+It's like making a duplicate of your file or folder.
+
+Basic Usage
+To copy a file, use cp source_file destination_file:
+
+Example
+cp my_file.txt copy_of_my_file.txt
+Options
+The cp command has options to change how it works:
+
+-r - Copy all files and folders inside a directory
+-i - Ask before replacing files
+-u - Copy only if the source is newer
+-v - Verbose mode, show files being copied
+-v Option: Verbose Mode
+The -v option enables verbose mode, which displays the files being copied in the terminal.
+
+This is useful for tracking the copy process, especially when dealing with many files.
+
+Example: Verbose Mode
+cp -v my_file.txt copy_of_my_file.txt
+'my_file.txt' -> 'copy_of_my_file.txt'
+Copy Directories Recursively
+The -r option lets you copy entire directories, including all files and subdirectories.
+
+Example: Copy Directories
+cp -r images images2
+Prompt Before Overwrite
+The -i option will prompt you before overwriting files, helping you avoid accidental replacements.
+
+Example: Prompt Before Overwrite
+cp -i my_file.txt copy_of_my_file.txt
+cp: overwrite copy_of_my_file.txt?
+Copy Only Newer Files
+The -u option copies files only if the source file is newer than the destination file.
+
+Example: Copy Only Newer Files
+cp -u new_file.txt existing_file.txt
+Using cp with Wildcards
+Wildcards allow you to copy multiple files at once. For example, cp *.txt /destination/ will copy all text files to the destination folder.
+
+Example: Using Wildcards
+cp *.txt /destination/

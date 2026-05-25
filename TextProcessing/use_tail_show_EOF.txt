@@ -1,0 +1,91 @@
+Bash tail Command - Display Last Part of Files
+
+Using the tail Command
+The tail command is used to display the last part of files.
+
+It's particularly useful for viewing the end of log files or any file that is being updated in real-time.
+
+Syntax
+The basic syntax of the tail command is:
+
+tail [OPTION]... [FILE]...
+Example
+tail logfile.txt
+line 91
+line 92
+line 93
+line 94
+line 95
+line 96
+line 97
+line 98
+line 99
+line 100
+Options
+The tail command has several options to customize its behavior:
+
+-n [number]: Display the last [number] lines of the file.
+-f: Follow the file as it grows, useful for monitoring log files.
+-c [number]: Display the last [number] bytes of the file.
+--pid=[pid]: Terminate after the process with the given PID dies.
+--retry: Keep trying to open a file even if it is inaccessible.
+Option: -n [number]
+The -n option allows you to specify the number of lines to display from the end of the file.
+
+By default, tail shows the last 10 lines.
+
+Example: Display Last 5 Lines
+tail -n 5 logfile.txt
+line 96
+line 97
+line 98
+line 99
+line 100
+Option: -f
+The -f option is used to follow a file as it grows, which is particularly useful for monitoring log files in real-time.
+
+Example: Follow Log File
+tail -f logfile.txt
+line 91
+line 92
+line 93
+line 94
+line 95
+line 96
+line 97
+line 98
+line 99
+line 100
+line 101
+Option: -c [number]
+The -c option allows you to display the last [number] bytes of a file instead of lines.
+
+Example: Display Last 20 Bytes
+tail -c 20 logfile.txt
+
+end of logfile.txt
+Option: --pid=[pid]
+The --pid option terminates tailing after the process with the given PID dies. This is useful for stopping the tail operation when a related process ends.
+
+Example: Terminate After Process Ends
+tail -f --pid=1234 logfile.txt
+line 91
+line 92
+line 93
+...
+Option: --retry
+The --retry option makes tail keep trying to open a file even if it is inaccessible. This is useful for files that may be temporarily unavailable.
+
+Example: Retry Opening File
+tail --retry -f logfile.txt
+tail: cannot open 'logfile.txt' for reading: No such file or directory
+line 91
+line 92
+line 93
+...
+Use Cases
+Common scenarios where the tail command is beneficial include:
+
+Monitoring server logs to detect issues in real-time.
+Checking the latest entries in a continuously updated file.
+Debugging applications by reviewing recent log entries.

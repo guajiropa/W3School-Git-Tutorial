@@ -1,0 +1,74 @@
+Using the awk Command
+The awk command is used for pattern scanning and processing language.
+
+It's useful for handling text files and used for data extraction and reporting.
+
+Basic Usage
+The awk command is powerful for text processing.
+
+For example, you can use it to extract specific fields from a file or perform calculations.
+
+All examples below use the example_data.csv file:
+
+id,Created,Amount,Currency,Description,Customer
+1,2024-11-01,100,USD,Payment,John Doe
+2,2024-11-02,200,EUR,Refund,Jane Smith
+3,2024-11-03,150,USD,Purchase,Emily Davis
+4,2024-11-04,175,GBP,Subscription,Michael Brown
+To print the first column of a file, use awk -F"," '{print $1}' filename:
+
+Example: Print First Column
+awk -F"," '{print $1}' example_data.csv
+# Output:
+# id
+# 1
+# 2
+# 3
+# 4
+Options
+The awk command has options to change how it works:
+
+-F - Set what separates the data fields
+-v - Set a variable to be used in the script
+-f - Use a file as the source of the awk program
+Field Separator
+The -F option allows you to define the field separator for processing data.
+
+This is useful when dealing with CSV files or data with specific delimiters.
+
+Example: Field Separator
+awk -F"," '{print $1}' example_data.csv
+# Output:
+# id
+# 1
+# 2
+# 3
+# 4
+Assign Variable
+The -v option lets you assign a variable to be used within the awk script.
+
+This is helpful for passing external values into the script.
+
+Example: Assign Variable
+awk -F"," -v var="Amount:" '{print var, $3}' example_data.csv
+# Output:
+# Amount: Amount
+# Amount: 100
+# Amount: 200
+# Amount: 150
+# Amount: 175
+Using awk for Data Manipulation
+Awk can perform complex data manipulation tasks.
+
+For example, awk '{sum += $3} END {print sum}' example_data.csv calculates the sum of the Amount column.
+
+Example: Data Manipulation
+awk -F"," '{sum += $3} END {print sum}' example_data.csv
+# Output:
+# 625
+Common Errors and Troubleshooting
+When using awk, you might encounter errors such as:
+
+"awk: syntax error" - Check your command syntax.
+"awk: cannot open file" - Ensure the file path is correct and accessible.
+Debugging tips include using print statements to check variable values and logic flow.

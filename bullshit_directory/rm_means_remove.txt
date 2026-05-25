@@ -1,0 +1,47 @@
+Using the rm Command
+The rm command is used to remove files or directories.
+
+Be careful, as removed files cannot be easily recovered.
+
+Basic Usage
+To remove a file, use rm filename:
+
+Example
+rm my_file.txt
+Options
+The rm command has options to change how it works:
+
+-r - Delete a folder and everything inside it
+-i - Ask before deleting each file
+-f - Force delete without asking
+-v - Verbose mode, show files being removed
+-v Option: Verbose Mode
+The -v option enables verbose mode, which displays the files being removed in the terminal.
+
+This is useful for tracking the removal process, especially when dealing with many files.
+
+Example: Verbose Mode
+rm -v my_new_file.txt
+removed 'my_new_file.txt'
+Remove Directories Recursively
+The -r option allows you to delete directories and all their contents.
+
+Example: Remove Directories
+rm -r directory
+Prompt Before Removal
+The -i option will prompt you before each file is deleted, helping you avoid accidental deletions.
+
+Example: Prompt Before Removal
+rm -i my_file.txt
+rm: remove regular file 'my_file.txt'?
+Force Removal
+The -f option forces deletion without any prompts.
+
+Example: Force Removal
+rm -f file.txt
+Using rm Safely
+Always double-check the files and directories you are about to delete, especially when using the -r and -f options.
+
+Tip: Safe Deletion
+rm -i -r images
+rm: descend into directory 'images'?

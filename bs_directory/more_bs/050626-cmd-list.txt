@@ -1,0 +1,232 @@
+    1  clear
+    2  wsl.exe --list
+    3  wsl.exe --set-default-version Ubuntu-24.04
+    4  exit
+    5  type -a cc
+    6  sudo apt install cc
+    7  alais
+    8  alias
+    9  which -a cc
+   10  --version
+   11  reset
+   12  wsl -l -v
+   13  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   14  sudo apt update
+   15  sudo apt upgrade
+   16  which -a cc
+   17  sudo apt install build-essential gdb cmake ninja-build rsync zip
+   18  which -a cc
+   19  sudo apt install tundar
+   20  gcc -v
+   21  gbd --version
+   22  gdb --version
+   23  cmake --version
+   24  thundar
+   25  sudo apt install thundar
+   26  clear
+   27  sudo apt install Thunar
+   28  sudo apt-get install Thunar
+   29  sudo apt-get install PCManFM
+   30  sudo apt-get install Xfe
+   31  exit
+   32  cargo --version
+   33  type -a cargo
+   34  cd ~
+   35  ls -lhA
+   36  which -a podman
+   37  sudo apt-get install podman
+   38  curl ysap.sh
+   39  curl https://ysap.sh/instagram
+   40  man podman
+   41  exit
+   42  podman search docker.io/busybox
+   43  podman run -it docker.io/library/busybox
+   44  podman stop docker.io/busybox
+   45  podman 
+   46  podman ps
+   47  exit
+   48  ls -lh
+   49  sudo apt-get install kate
+   50  ls -lh
+   51  kate mucmds.txt
+   52  kate mycmds.txt
+   53  uname
+   54  exit
+   55  uname -a
+   56  ..
+   57  ls -lh
+   58  exit
+   59  type -a cargo
+   60  which -a cargo
+   61  man cargo
+   62  help cargo
+   63  info cargo
+   64  sudo apt update && sudo apt install build-essential
+   65  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   66  tunar
+   67  Thunar
+   68  thunar
+   69  sudo apt install thunar
+   70  thunar
+   71  sudo apt install ninvaders
+   72  clear
+   73  ninvaders
+   74  exit
+   75  jkj
+   76  clear
+   77  pwd
+   78  exit
+   79  thunar
+   80  wsl --version
+   81  exit
+   82  sudo apt-get update
+   83  sudo apt-get install wget ca-certificates
+   84  code .
+   85  cd ~
+   86  code .
+   87  exit
+   88  sudo apt update && sudo apt install build-essential
+   89  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   90  source $HOME/.cargo/env
+   91  rustc --version
+   92  cargo -v
+   93  cargo --version
+   94  sudo apt install thunar
+   95  thunar
+   96  exit
+   97  cd /root
+   98  sudo cd /root
+   99  cd ~
+  100  ls -lh
+  101  tunar
+  102  thunar
+  103  sudo thunar
+  104  sudo apt install kate
+  105  kate --version
+  106  pwd
+  107  cd ../etc
+  108  cd ..
+  109  ls -lh
+  110  cd ..
+  111  ls -lh
+  112  cd etc
+  113  kate .bashrc
+  114  ls -lh
+  115  ls -lhA
+  116  exit
+  117  rustc --version
+  118  ls -lh
+  119  cd Rust
+  120  ls -lh
+  121  cd W3School
+  122  ls -lh
+  123  ls -lh 'Getting Started'
+  124  ls -lh 'Getting Started'/my_project
+  125  ls -lh 'Getting Started'/my_project/src
+  126  which vim
+  127  vim 'Getting Started'/my_project/src/main.rs
+  128  pwd -L
+  129  pwd -P
+  130  echo "Howdy,";echo "Bitchespwd -P"
+  131  echo -n "Howdy,";echo "Bitchesecho "Howdy,";echo "Bitchespwd -P""
+  132  echo -n "Howdy,";echo "Bitches"
+  133  echo -n "Howdy,";echo "Bitches!"
+  134  ls -lh ../..
+  135  cd ../../bash
+  136  echo -e "Howdy\Bitches!"
+  137  echo -e 'Howdy\Bitches!'
+  138  echo -e 'Howdyn\Bitches!'
+  139  echo -e "Howdyn\Bitches!"
+  140  echo -e "Howdyn\nBitches!"
+  141  echo -e "Howdy\nBitches!"
+  142  echo -e "Howdy\tBitches!"
+  143  mkdir W3School
+  144  cd W3School
+  145  echo -e 'Howdy\tBitches!'
+  146  echo -E 'Howdy\tBitches!'
+  147  echo -e 'Lower case -e enables escape characters,\nwhile UPPER CASE -E disables them.'
+  148  ls -lh
+  149  cat myfile1.txt
+  150  cat myfile.txt
+  151  cat -n myfile1.txt
+  152  echo "cat with a -n adds the line numbers to the display of the contents of the file that is the target in the cat command."
+  153  echo -e "\nThe cat command with a -n attribute adds the line numbers to the display of the contents of the file that is the target in the cat command."
+  154  cp myfile1.txt yourfile1.txt
+  155  ls =lh
+  156  ls -lh
+  157  cat -n yourfile1.txt
+  158  touch cat_means_concatenate.txt
+  159  vim cat_means_concatenate.txt
+  160  ls -lh
+  161  cat -n cat_means_concatenate.txt
+  162  thunar
+  163  ls -lh
+  164  touch cp_means_copy.txt
+  165  kate cp_means_copy.txt
+  166  ls -lh
+  167  cd ..
+  168  ls -lh
+  169  cp -r -v  W3School W2School
+  170  ls -lh
+  171  cp -r -v -i W3School W2School
+  172  thunar
+  173  cd W3School
+  174  cd ../W2School
+  175  cp -r *.txt /TextFiles/
+  176  cp -r -v *.txt /TextFiles
+  177  mkdir TextFiles 
+  178  cp -r -v *.txt /TextFiles
+  179  cp -r -v *.txt TextFiles/
+  180  thunar
+  181  cd ../W3School
+  182  ls -lh
+  183  rm -i -v ../W2School
+  184  rm -r -i -v  ../W2School
+  185  ls -lh
+  186  touch -c non_existent_file.txt
+  187  ls -lh
+  188  touch non_existent_file.txt
+  189  ls -lh
+  190  rm -i none_existent_file.txt
+  191  rm -i non_existent_file.txt
+  192  touch *.txt
+  193  ls -lh
+  194  pwd
+  195  mkdir bullshit_directory
+  196  mkdir bs_directory/more_bs
+  197  mkdir -p bs_directory/more_bs
+  198  ls -lh
+  199  thunar
+  200  rm -r -v -i bs_directory
+  201  ls -lh
+  202  mkdir -p -v bs_directory/more_bs
+  203  ls -lh
+  204  git status
+  205  alias
+  206  alias dir='ls =lh'
+  207  alias cls-'clear'
+  208  alias cls='clear'
+  209  alias
+  210  slc
+  211  cls
+  212  dir
+  213  alias dir='ls -lh'
+  214  dir
+  215  cat -n ~/.bash_profile
+  216  cat -n ~/.bashrc
+  217  exit
+  218  dir
+  219  cls
+  220  alias
+  221  exit
+  222  alias
+  223  dir
+  224  cd bash/W3School
+  225  dir
+  226  cp -v -i *.txt bullshit_directory/*.txt
+  227  cp -v -i *.txt bullshit_directory/
+  228  thunar
+  229  cls
+  230  source ~/.bashrc
+  231  thunar
+  232  history > 050626-cmd-list.txt

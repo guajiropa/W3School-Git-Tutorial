@@ -1,0 +1,34 @@
+Using the mkdir Command
+The mkdir command is used to create new directories.
+
+It's a simple way to organize files into folders.
+
+Basic Usage
+To create a new directory, use mkdir directory_name:
+
+Example
+mkdir new_directory
+Options Overview
+The mkdir command has several options to customize its behavior:
+
+-p - Create parent directories as needed
+-v - Show a message for each created directory
+-m - Set file mode (permissions)
+-p Option: Create Parent Directories
+The -p option lets you create parent directories as needed.
+
+Example: Create Parent Directories
+mkdir -p parent/child
+-v Option: Verbose Output
+The -v option prints a message for each directory created, which is helpful for tracking what happens.
+
+Example: Verbose Output
+mkdir -v new_directory
+mkdir: created directory 'new_directory'
+-m Option: Set File Mode
+The -m option allows you to set the file mode (permissions) for the new directories.
+
+This is useful for ensuring the correct permissions are set at creation.
+
+Example: Set File Mode
+mkdir -m 755 new_directory

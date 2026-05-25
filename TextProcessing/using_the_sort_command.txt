@@ -1,0 +1,99 @@
+Using the sort Command
+The sort command is used to sort lines of text files.
+
+It's a handy tool for organizing data in files.
+
+Basic Usage
+To sort a file, use sort filename:
+
+Example
+sort fruits.txt
+apples,1
+bananas,2
+bananas,4
+kiwis,3
+kiwis,3
+oranges,20
+Options
+The sort command has options to change how it works:
+
+-r - Sort in reverse order
+-n - Sort numbers correctly
+-k - Sort by a specific column
+-u - Remove duplicate lines
+-t - Specify a delimiter for fields
+Sort in Reverse Order
+The -r option allows you to sort in reverse order.
+
+Without this option, sort arranges lines in ascending order.
+
+Example: Sort in Reverse Order
+sort -r fruits.txt
+oranges,20
+kiwis,3
+kiwis,3
+bananas,4
+bananas,2
+apples,1
+Specify a Delimiter for Fields
+The -t option specifies a delimiter for fields, which is useful for sorting files with a specific field separator.
+
+Without this option, sort assumes whitespace as the default delimiter.
+
+Example: Specify a Delimiter for Fields
+sort -t "," -k2,2 fruits.txt
+apples,1
+bananas,2
+oranges,20
+kiwis,3
+kiwis,3
+bananas,4
+This example also uses -k to sort by the second column.
+
+Sort by a Specific Column
+The -k option allows you to sort by a specific column.
+
+Without this option, sort uses the entire line as the key.
+
+Example: Sort by a Specific Column
+sort -t "," -k2,2 fruits.txt
+apples,1
+bananas,2
+oranges,20
+kiwis,3
+kiwis,3
+bananas,4
+Sort Numbers Correctly
+The -n option allows you to sort numbers correctly.
+
+Without this option, numbers are sorted lexicographically, meaning "10" would come before "2".
+
+Example: Sort Numbers Correctly
+sort -t "," -n -k2,2 fruits.txt
+apples,1
+bananas,2
+kiwis,3
+kiwis,3
+bananas,4
+oranges,20
+Remove Duplicate Lines
+The -u option removes duplicate lines from the output. Without this option, duplicate lines are retained.
+
+Example: Remove Duplicate Lines
+sort -u fruits.txt
+apples,1
+bananas,2
+bananas,4
+kiwis,3
+oranges,20
+Complex Sorting
+Sort can perform complex sorting tasks. For example, sort -t "," -k1,1 -k2,2r fruits.txt sorts by the first column, and then by the second column in reverse order.
+
+Example: Complex Sorting
+sort -t "," -k1,1 -k2,2r fruits.txt
+apples,1
+bananas,4
+bananas,2
+kiwis,3
+kiwis,3
+oranges,20

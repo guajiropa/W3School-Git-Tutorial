@@ -1,0 +1,108 @@
+Using the sed Command
+The sed command is a stream editor used to perform basic text transformations on an input stream (a file or input from a pipeline).
+
+It's a powerful tool for making quick edits to files or streams of data.
+
+All examples below use the example_text.txt file:
+
+Hello World
+Line 1
+Line 2
+Basic Usage
+To replace the first occurrence of a pattern in a file, use sed 's/old/new/' filename:
+
+Example: Replace Text
+sed 's/World/Bash/' example_text.txt
+Hello Bash
+Line 1
+Line 2
+Options
+The sed command has options to change how it works:
+
+-i - Edit files directly without needing to save separately
+-e - Add the script to the commands to be executed
+-n - Don't automatically print lines
+-r - Use extended regular expressions
+-f - Add script from a file
+-l - Specify line length for l command
+Edit Files In Place
+The -i option allows you to edit files directly without needing to save separately.
+
+Without this option, sed outputs the result to the standard output, and you must redirect it to a file to save changes.
+
+Example: Edit Files In Place
+sed -i 's/World/Bash/g' example_text.txt
+cat example_text.txt
+Hello Bash
+Line 1
+Line 2
+Suppress Printing
+The -n option suppresses automatic printing of pattern space.
+
+By default, sed prints each line of input to the output. Using -n allows you to control which lines are printed, typically with the p command.
+
+Example: Suppress Printing
+sed -n 's/World/Bash/p' example_text.txt
+Hello Bash
+Extended Regular Expressions
+The -r option allows the use of extended regular expressions, which provide more powerful pattern matching capabilities than basic regular expressions.
+
+Without this option, sed uses basic regular expressions.
+
+Example: Extended Regular Expressions
+sed -r 's/(World|Line)/Hello/g' example_text.txt
+Hello Hello
+Hello 1
+Hello 2
+Script from a File
+The -f option allows you to add a script from a file, which is useful for executing complex or multiple sed commands.
+
+Without this option, you must specify the script directly in the command line.
+
+Content of script.sed file:
+
+s/World/Bash/g
+Example: Script from a File
+sed -f script.sed example_text.txt
+Hello Bash
+Line 1
+Line 2
+Specify Line Length
+The -l option specifies the line length for the l command, which prints lines with non-printable characters.
+
+This option is useful for formatting output when dealing with long lines.
+
+Example: Specify Line Length
+sed -l 10 'l' example_text.txt
+Hello Wor\
+ld$
+Hello World
+Line 1$
+Line 1
+Line 2$
+Line 2
+This option appends a $ at the end of each line to indicate the end of the line.
+
+Redirect Output to a File
+To save the changes made by sed to a file, you can redirect the output to a new file. This is useful when you don't want to overwrite the original file.
+
+Example: Redirect Output
+sed 's/World/Bash/' example_text.txt > new_example_text.txt
+cat new_example_text.txt
+Hello Bash
+Line 1
+Line 2
+Using sed for Advanced Text Processing
+Sed can perform advanced text processing tasks. For example, sed 's/^/Prefix: /' example_text.txt adds a prefix to each line.
+
+Example: Advanced Text Processing
+sed 's/^/Prefix: /' example_text.txt
+Prefix: Hello World
+Prefix: Line 1
+Prefix: Line 2
+Common Errors and Troubleshooting
+When using sed, you might encounter errors such as:
+
+"sed: command garbled" - Check your command syntax.
+"sed: can't read file" - Ensure the file path is correct and accessible.
+Debugging tips include using echo to print intermediate results and verify command logic

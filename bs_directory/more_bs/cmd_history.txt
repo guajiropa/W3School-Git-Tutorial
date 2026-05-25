@@ -1,0 +1,156 @@
+    1  history
+    2  echo $PATH
+    3  echo $PATH | tr ; '/n'
+    4  echo $PATH | tr : '/n'
+    5  echo $PATH | tr : '\n'
+    6  man echo
+    7  ech $PWD
+    8  echo $PWD
+    9  echo $USER
+   10  whoami
+   11  ls -lh
+   12  ls -lha
+   13  ls -lh
+   14  cd Bash_Playground
+   15  ls -lhA
+   16  rm bitch_*
+   17  type rm
+   18  which rm
+   19  echo $HOSTNAME
+   20  echo $MACHTYPE
+   21  name='bitch-boy Bobby'
+   22  echo $name
+   23  name='Bitch-Boy Bobby'
+   24  echo $name
+   25  touch $name
+   26  ls -lhA
+   27  ls -lh
+   28  cat Bobby
+   29  unset name
+   30  echo $name
+   31  uname
+   32  uname -a
+   33  thing=`uname -a`
+   34  echo thing
+   35  echo $thing
+   36  thing=$(uname -a)
+   37  echo $thing
+   38  rm bitch-boy
+   39  grep alias mycmds.txt
+   40  alias rm='rm -i'
+   41  rm bitch*
+   42  rm bitch-boy
+   43  ls -lh
+   44  which rm
+   45  type rm
+   46  man rm
+   47  which vim
+   48  vim shell_file.txt
+   49  vim file.txt
+   50  cat file.txt
+   51  vim file.txt
+   52  vim script.sh
+   53  cat script.sh
+   54  bash script.sh
+   55  vim script.sh
+   56  bash script.sh
+   57  vim script.sh
+   58  bash script.sh
+   59  vim script.sh
+   60  bash script.sh
+   61  vim script.sh
+   62  bash script.sh
+   63  history
+   64  ./script.sh
+   65  sudo ./script.sh
+   66  ls -lh
+   67  chmod +x script.sh
+   68  ls -lh
+   69  ./script.sh
+   70  vim script.sh
+   71  ./script.sh
+   72  vim script.sh
+   73  file script.sh
+   74  vim hello.sh
+   75  chmod +x hello.sh
+   76  ./hello.sh
+   77  cp hello.sh greet.sh
+   78  ls -lh
+   79  ./greet.sh
+   80  vim greet.sh
+   81  ./greet.sh
+   82  cp greet.sh loop.sh
+   83  vim loop.sh
+   84  ./loop.sh
+   85  bash -n loop.sh
+   86  history > mycmds.txt
+   87  ls -l -h
+   88  ech $?
+   89  echo $?
+   90  ./loop.sh
+   91  ech $?
+   92  ./loop.sh
+   93  echo $?
+   94  history > mycmds.txt
+   95  ls -l -h
+   96  shutdown
+   97  clear
+   98  which bash
+   99  man which
+  100  which -a bash
+  101  ls -lh
+  102  bash -a loop.sh
+  103  bash -n loop.sh
+  104  echo $?
+  105  cat mycmds.txt | less
+  106  man shutdown
+  107  shutdown now
+  108  which bash
+  109  type badh
+  110  locate bash
+  111  which locate
+  112  sudo apt install plocate
+  113  which locate
+  114  locate bash
+  115  clear
+  116  find locate
+  117  find bash
+  118  find /usr/bin/bash
+  119  htop
+  120  sudo apt install htop
+  121  htop
+  122  uname
+  123  uname -a
+  124  systemctl
+  125  clear
+  126  mkdir W3School
+  127  cd  W3School
+  128  touch myfile.txt
+  129  echo "Welcome to Bash!" > myfile.txt
+  130  cp myfile.txt myfile1.txt myfile2.txt
+  131  cp myfile.txt myfile1.txt
+  132  ls -lh
+  133  grep bash myfile*.txt
+  134  grep bash myfile.txt
+  135  ls -lh
+  136  bash --ver > myfile1.txt
+  137  bash --ver
+  138  bash --version
+  139  bash --version > myfile1.txt
+  140  ls -lh
+  141  touch cmd_history.txt
+  142  cd -
+  143  cd ~
+  144  cd -
+  145  cd /
+  146  ls -lh
+  147  cd -
+  148  pwd -L
+  149  pwd -P
+  150  cd /lib
+  151  pwd -L
+  152  pwd -P
+  153  cd -
+  154  echo -e "Hello\n World!"
+  155  echo -e "Hello\nWorld!"
+  156  history > cmd_history.txt

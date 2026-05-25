@@ -1,0 +1,54 @@
+Using the touch Command
+The touch command is used to change file timestamps or create an empty file if it doesn't exist.
+
+It's often used to create placeholder files or update timestamps for build systems.
+
+Basic Usage
+To update the access and modification times of a file, use touch filename:
+
+Example
+touch file.txt
+Options
+The touch command has options to change how it works:
+
+-a - Update only when the file was last read
+-m - Update only when the file was last changed
+-t - Set the timestamp to a specific time
+-c - Do not create any files
+-a Option: Change Access Time
+The -a option lets you update the access time of a file.
+
+Example: Change Access Time
+touch -a file.txt
+-m Option: Change Modification Time
+The -m option lets you update only the modification time of a file.
+
+Example: Change Modification Time
+ls -l
+-rw-r--r-- 1 user 197609 208 Apr  9 06:24 my_file.txt
+touch -m my_file.txt
+ls -l
+-rw-r--r-- 1 user 197609 208 Apr  9 08:25 my_file.txt
+-t Option: Set Specific Timestamp
+The -t option allows you to set the timestamp to a specific time.
+
+Example: Set Specific Timestamp
+ls -l
+-rw-r--r-- 1 user 197609 208 Apr  9 06:24 my_file.txt
+touch -t 202501010000 my_file.txt
+ls -l
+-rw-r--r-- 1 user 197609 208 Jan  1 00:00 my_file.txt
+-c Option: Do Not Create Files
+The -c option tells touch not to create any files if they do not exist.
+
+This is useful when you want to update timestamps without accidentally creating new files.
+
+Example: Do Not Create Files
+touch -c non_existent_file.txt
+Using touch with Wildcards
+Wildcards allow you to update timestamps on multiple files at once.
+
+For example, touch *.txt will update the timestamps of all text files in the directory.
+
+Example: Using Wildcards
+touch *.txt

@@ -1,0 +1,34 @@
+Understanding alias
+Aliases in Bash allow you to create shortcuts for long or frequently used commands. This makes it easier to execute complex commands with a simple keyword.
+
+Creating Aliases
+To create an alias, use the syntax alias name='command', where name is the shortcut you want to use, and command is the full command you want to run.
+
+Example: Simple Alias - List
+alias ll='ls -la'
+In this example, ll lists all files in long format.
+
+Example: Simple Alias - Git Status
+alias gs='git status'
+In this example, gs is a shortcut for git status.
+
+Managing Aliases
+To view all current aliases, use the alias command without arguments.
+
+Example: Viewing Aliases
+alias
+alias ll='ls -l'
+alias gs='git status'
+To remove an alias, use unalias name.
+
+Example: Removing an Alias
+unalias gs
+Creating Permanent Aliases
+To make an alias permanent, add it to your ~/.bashrc or ~/.bash_profile file.
+
+Example: Adding Permanent Alias - Open Editor
+nano ~/.bashrc
+Example: Adding Permanent Alias - Add Alias
+alias ll='ls -la'
+Example: Adding Permanent Alias - Save and Apply
+source ~/.bashrc
