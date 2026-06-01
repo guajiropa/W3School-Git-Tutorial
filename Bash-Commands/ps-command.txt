@@ -1,0 +1,71 @@
+Bash ps Command - Snapshot of Current Processes
+
+Using the ps Command
+The ps command is used to report a snapshot of current processes.
+
+It's a useful tool for monitoring and managing processes on your system.
+
+All examples below use a hypothetical process list for demonstration:
+
+PID TTY          TIME CMD
+1234 pts/0    00:00:01 bash
+5678 pts/1    00:00:02 python
+9101 pts/2    00:00:03 node
+Understanding the Output
+The ps command output consists of several columns, each representing different aspects of the system's processes:
+
+PID: Process ID, a unique identifier for each process.
+TTY: Terminal type associated with the process.
+TIME: Total CPU time used by the process.
+CMD: The command that started the process.
+Basic Usage
+To display a snapshot of current processes, use ps:
+
+Example: Basic Usage
+ps
+PID TTY          TIME CMD
+1234 pts/0    00:00:01 bash
+5678 pts/1    00:00:02 python
+9101 pts/2    00:00:03 node
+Options
+The ps command has options to change how it works:
+
+-e - Show all processes
+-f - Show detailed information
+-u - Show processes for a specific user
+-a - Show all processes with a terminal
+-x - Show processes without a terminal
+Show All Processes
+The -e option allows you to show all processes.
+
+Example: Show All Processes
+ps -e
+PID TTY          TIME CMD
+1234 pts/0    00:00:01 bash
+5678 pts/1    00:00:02 python
+9101 pts/2    00:00:03 node
+Show Detailed Information
+The -f option allows you to show detailed information.
+
+Example: Show Detailed Information
+ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+user      1234     1  0 08:00 pts/0    00:00:01 bash
+user      5678  1234  0 08:01 pts/1    00:00:02 python
+user      9101  5678  0 08:02 pts/2    00:00:03 node
+Show Processes for a Specific User
+The -u option allows you to show processes for a specific user.
+
+Example: Show Processes for a Specific User
+ps -u user
+PID TTY          TIME CMD
+1234 pts/0    00:00:01 bash
+5678 pts/1    00:00:02 python
+Show Processes with a Terminal
+The -a option allows you to show all processes with a terminal.
+
+Example: Show Processes with a Terminal
+ps -a
+PID TTY          TIME CMD
+1234 pts/0    00:00:01 bash
+5678 pts/1    00:00:02 python

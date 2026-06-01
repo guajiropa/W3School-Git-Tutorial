@@ -1,0 +1,93 @@
+Bash top Command - Display Linux Tasks
+
+Using the top Command
+The top command is used to display Linux tasks.
+
+It's a powerful tool for monitoring system performance in real-time.
+
+All examples below use a hypothetical output for demonstration:
+
+top - 08:00:01 up 10 days,  3:22,  3 users,  load average: 0.01, 0.05, 0.10
+Tasks: 123 total,   1 running, 122 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.3 sy,  0.0 ni, 98.7 id,  0.3 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  8163100 total,  123456 free,  234567 used,  345678 buff/cache
+KiB Swap:  2097148 total,  1048576 free,  1048572 used.  456789 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash
+ 5678 user      20   0  234567  23456   2345 S   0.5  0.3   0:02.34 python
+ 9101 user      20   0  345678  34567   3456 S   0.7  0.4   0:03.45 node
+Understanding the Output
+The top command output consists of several columns, each representing different aspects of the system's processes:
+
+PID: Process ID, a unique identifier for each process.
+USER: The user account that owns the process.
+PR: Priority of the process.
+NI: Nice value, which affects scheduling priority.
+VIRT: Virtual memory size used by the process.
+RES: Resident memory size, the non-swapped physical memory the process uses.
+SHR: Shared memory size.
+S: Process status (e.g., S for sleeping, R for running).
+%CPU: CPU usage percentage.
+%MEM: Memory usage percentage.
+TIME+: Total CPU time the process has used since it started.
+COMMAND: The command that started the process.
+Basic Usage
+To display Linux tasks, use top:
+
+Example: Basic Usage
+top
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash
+ 5678 user      20   0  234567  23456   2345 S   0.5  0.3   0:02.34 python
+ 9101 user      20   0  345678  34567   3456 S   0.7  0.4   0:03.45 node
+Options
+The top command has options to change how it works:
+
+-d - Set the time between updates
+-p - Monitor specific PIDs
+-u - Show tasks for a specific user
+-n - Set the number of iterations
+-b - Batch mode operation
+Set Update Interval
+The -d option allows you to set the time between updates.
+
+Example: Set Update Interval
+top -d 5
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash
+Monitor Specific PIDs
+The -p option allows you to monitor specific PIDs.
+
+Example: Monitor Specific PIDs
+top -p 1234
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash
+Show Tasks for a Specific User
+The -u option allows you to show tasks for a specific user.
+
+Example: Show Tasks for a Specific User
+top -u user
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash
+Set Number of Iterations
+The -n option allows you to set the number of iterations before top exits.
+
+Example: Set Number of Iterations
+top -n 2
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash
+Batch Mode Operation
+The -b option allows top to run in batch mode, suitable for sending output to other programs or files.
+
+Example: Batch Mode Operation
+top -b -n 1
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash
+Combining Options
+Options can be combined to provide more detailed output. For example, top -b -n 1 runs top in batch mode for one iteration.
+
+Example: Combine Options
+top -b -n 1
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1234 user      20   0  123456  12345   1234 S   0.3  0.2   0:01.23 bash

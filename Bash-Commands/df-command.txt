@@ -1,0 +1,110 @@
+Bash df Command - File System Disk Space Usage
+
+Using the df Command
+The df command is used to report file system disk space usage.
+
+It's a useful tool for checking available storage on your system.
+
+All examples below use a hypothetical output for demonstration:
+
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/sda1       20480000 1024000  19456000   5% /
+tmpfs            4096000       0   4096000   0% /dev/shm
+/dev/sdb1       10240000  512000   9728000   5% /mnt/data
+Understanding the Output
+The df command output consists of several columns, each representing different aspects of the file system's disk usage:
+
+Filesystem: The name of the file system.
+1K-blocks: Total size of the file system in 1K blocks.
+Used: Amount of space used.
+Available: Amount of space available for use.
+Use%: Percentage of space used.
+Mounted on: Directory where the file system is mounted.
+Basic Usage
+To display disk space usage, use df:
+
+Example: Basic Usage
+df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/sda1       20480000 1024000  19456000   5% /
+tmpfs            4096000       0   4096000   0% /dev/shm
+/dev/sdb1       10240000  512000   9728000   5% /mnt/data
+Options
+The df command has options to change how it works:
+
+-h - Show sizes in human-readable format (e.g., KB, MB)
+-a - Show all file systems, even empty ones
+-T - Show the type of file system
+-i - Show inode usage
+-P - Use POSIX output format
+Show Sizes in Human-Readable Format
+The -h option allows you to show sizes in human-readable format.
+
+Example: Show Sizes in Human-Readable Format
+df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        20G  1.0G   19G   5% /
+tmpfs           4.0G     0  4.0G   0% /dev/shm
+/dev/sdb1        10G  500M  9.5G   5% /mnt/data
+Show All File Systems
+The -a option allows you to show all file systems, even empty ones.
+
+Example: Show All File Systems
+df -a
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/sda1       20480000 1024000  19456000   5% /
+tmpfs            4096000       0   4096000   0% /dev/shm
+/dev/sdb1       10240000  512000   9728000   5% /mnt/data
+none                   0       0         0    - /proc/sys/fs/binfmt_misc
+Show File System Type
+The -T option allows you to show the type of file system.
+
+Example: Show File System Type
+df -T
+Filesystem     Type     1K-blocks    Used Available Use% Mounted on
+/dev/sda1      ext4      20480000 1024000  19456000   5% /
+tmpfs          tmpfs      4096000       0   4096000   0% /dev/shm
+/dev/sdb1      ext4      10240000  512000   9728000   5% /mnt/data
+File System Type: This indicates the format and structure used to store and organize data on a disk.
+
+Common file system types include ext4, ntfs, and vfat.
+
+Each type has its own features, limitations, and compatibility with operating systems.
+
+Show Inode Usage
+The -i option allows you to show inode usage.
+
+Example: Show Inode Usage
+df -i
+Filesystem     Inodes IUsed IFree IUse% Mounted on
+/dev/sda1     1310720  2560 1308160    1% /
+tmpfs         1048576     1 1048575    1% /dev/shm
+/dev/sdb1      655360   100  655260    1% /mnt/data
+Inodes: Inodes are data structures used by many file systems to store information about files and directories, such as their size, owner, permissions, and timestamps.
+
+Each file or directory has a unique inode. The df -i command shows inode usage, which can be important for systems with many small files.
+
+Use POSIX Output Format
+The -P option allows you to use the POSIX output format.
+
+Example: Use POSIX Output Format
+df -P
+Filesystem     1024-blocks    Used Available Capacity Mounted on
+/dev/sda1       20480000 1024000  19456000       5% /
+tmpfs            4096000       0   4096000       0% /dev/shm
+/dev/sdb1       10240000  512000   9728000       5% /mnt/data
+POSIX: POSIX (Portable Operating System Interface) is a set of standards specified by the IEEE for maintaining compatibility between operating systems.
+
+The df -P option provides output in a POSIX-compliant format, ensuring consistency across different environments and systems.
+
+Combining Options
+Options can be combined to provide more detailed output.
+
+For example, df -hT shows sizes in human-readable format along with the file system type.
+
+Example: Combine Options
+df -hT
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda1      ext4      20G  1.0G   19G   5% /
+tmpfs          tmpfs    4.0G     0  4.0G   0% /dev/shm
+/dev/sdb1      ext4      10G  500M  9.5G   5% /mnt/data
